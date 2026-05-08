@@ -79,17 +79,17 @@ The model uses self-attention to determine which words are important in a senten
 
 ## 🔄 Model Pipeline
 
-Raw Ticket Text 
-      ↓ 
-Label Encoding 
-      ↓ 
-Tokenization 
-      ↓  
-Transformer Model(DeBERTa) 
-      ↓ 
-Training (Fine-tuning)
-      ↓ 
-Prediction (Category Output)
+Raw Ticket Text   
+      ↓   
+Label Encoding   
+      ↓   
+Tokenization   
+      ↓    
+Transformer Model(DeBERTa)   
+      ↓   
+Training (Fine-tuning)  
+      ↓   
+Prediction (Category Output)  
 
 ------------------------------------------------------------------------
 
@@ -129,11 +129,11 @@ numpy
 
 ## 📁 Project Structure
 
-customer-support-ticket-classifier/ 
-│ 
-├── ticket-tagger.ipynb 
-├── README.md
-├── requirements.txt
+customer-support-ticket-classifier/   
+│   
+├── ticket-tagger.ipynb   
+├── README.md  
+├── requirements.txt  
 
 ------------------------------------------------------------------------
 
