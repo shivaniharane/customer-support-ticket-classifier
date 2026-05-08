@@ -30,8 +30,33 @@ their text content.
 -   Framework: Hugging Face Transformers
     (https://huggingface.co/docs/transformers)
 
-The model is fine-tuned for a **text classification task**, where it learns to map ticket text to specific categories.
-The model uses self-attention to understand relationships between words in a ticket.
+------------------------------------------------------------------------
+
+## 🤖 How DeBERTa Works
+
+DeBERTa (Decoding-enhanced BERT with Disentangled Attention) is a transformer-based language model developed by Microsoft.
+
+The model processes text using a mechanism called self-attention, where each word looks at other words in the sentence to understand context and meaning.
+
+For example, in the sentence:
+
+"Payment failed during checkout"
+
+the model focuses more on important words like:
+- "Payment"
+- "Failed"
+
+This helps the model understand that the ticket is related to a billing issue.
+
+During training:
+1. The input text is tokenized into numerical representations.
+2. Attention masks are created to ignore padding tokens.
+3. The transformer model analyzes relationships between words.
+4. The classification layer predicts the most appropriate ticket category.
+
+The model learns by comparing predictions with actual labels and updating internal weights using backpropagation.
+
+------------------------------------------------------------------------
 
 ##🧠 Attention Mechanism
 
@@ -75,26 +100,6 @@ Prediction (Category Output)
   My payment failed during checkout   Billing
   App crashes when I open it          Technical Support
   Need access to company VPN          IT Support
-
-------------------------------------------------------------------------
-
-## 🧪 Training Details
-
--   Batch Size: 8\
--   Learning Rate: 2e-5\
--   Epochs: 10\
--   Optimizer: AdamW\
--   Loss Function: Cross-Entropy Loss
-
-------------------------------------------------------------------------
-
-## 📈 Evaluation
-
-The model is evaluated using: 
-- Accuracy 
-- Precision 
-- Recall 
-- F1-score
 
 ------------------------------------------------------------------------
 
